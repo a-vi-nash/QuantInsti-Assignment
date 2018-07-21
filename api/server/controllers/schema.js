@@ -1,14 +1,14 @@
 
-// exports.IngredientsGET = {
-//   IngredientsName: global.expressJoi.Joi.string(),
-//   data: global.expressJoi.Joi.array().items(sortOrderMatcher).required(),
-//   sortOrder: global.expressJoi.Joi.number().required()
-// }
+//Fetch Coupon Data
+module.exports.CouponGET = {
+    couponCode: global.expressJoi.Joi.string().required()
+}
 
-
-// var sortOrderMatcher = global.expressJoi.Joi.object({
-//   _id :global.expressJoi.Joi.string().regex(global.config.defaultMongoIdRegex).required(),
-//   sortOrder: global.expressJoi.Joi.number().required()
-// });
-
+//Save Order Data
+module.exports.OrderPost = {
+    name: global.expressJoi.Joi.string().required(),
+    address: global.expressJoi.Joi.object().required(),
+    phoneNo: global.expressJoi.Joi.string().required(),
+    orderDetails: global.expressJoi.Joi.object().required()
+}
 

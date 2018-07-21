@@ -1,4 +1,5 @@
 
+'use strict';
 // External module dependencies
 const Joi = require('joi');
 
@@ -83,7 +84,7 @@ exports.Joi = Joi;
  * @private
  */
 
-  copyObject = (from, to, validations, strict, decode) => {
+  let copyObject = (from, to, validations, strict, decode) => {
   let extras = {};
   if (from) {
     for (var key in from) {

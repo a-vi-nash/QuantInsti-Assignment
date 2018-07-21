@@ -2,7 +2,6 @@
  * Module dependencies
  */
 const Mongoose = require("mongoose"),
-  path = require("path"),
   Types = Mongoose.Schema.Types
 
 /**
@@ -10,46 +9,35 @@ const Mongoose = require("mongoose"),
  */
 const modelName = "Ingredients";
 
-var Address = new Mongoose.Schema({
-  billingAddress: {
-    type: AddressDetails,
-    required: true
+var IngredientsItems = new Mongoose.Schema({
+  item:{
+      type: Types.String
   },
-  serviceAddress: {
-    type: AddressDetails,
-    required: true
-  },
-  isActive: {
-    type: Types.Boolean,
-    default: true
-  },
-  customerNo: {
-    type: Types.String
-  },
-  customerGuid: {
-    type: Types.String
-  },
-  isBillingAddressSameAsServiceAddress: {
-    type: Types.Boolean,
-    default: false
+  price:{
+      type: Types.Number
   }
-},
-  { timestamps: true });
+});
+
 
 const IngredientsSchema = new Mongoose.Schema(
   {
-    IngredientsName: {
+    ingredientsType: {
       type: Types.String,
       unique: true,
-      required: true,
+      required: true
     },
-    icon: {
-      type: Types.String
+    items: {
+      type: [IngredientsItems]
     },
     sortOrder:{
       type: Types.Number
     },
-    address: [Address],
+    min:{
+      type: Types.Number
+    },
+    max:{
+      type: Types.Number
+    }
   },
   { timestamps: true }
 );

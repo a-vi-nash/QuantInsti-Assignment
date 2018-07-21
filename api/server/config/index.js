@@ -1,3 +1,4 @@
+'use strict';
 const Dotenv = require("dotenv");
 
 let envPath = "./.local.env";
