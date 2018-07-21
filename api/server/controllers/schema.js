@@ -5,7 +5,7 @@ module.exports.CouponGET = {
 }
 
 //Save Order Data
-module.exports.OrderPost = {
+module.exports.OrderPOST = {
     name: global.expressJoi.Joi.string().required(),
     address: global.expressJoi.Joi.object().required(),
     phoneNo: global.expressJoi.Joi.string().required(),

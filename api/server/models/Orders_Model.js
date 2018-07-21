@@ -7,7 +7,7 @@ const Mongoose = require("mongoose"),
 /**
  * Order Schema
  */
-const modelName = "Order";
+const modelName = "Orders";
 
 var Address = new Mongoose.Schema({
     addressLine1:{
@@ -31,10 +31,9 @@ var PizzaIngredients = new Mongoose.Schema({
     items:[Types.String]
 });
 
-var OrderDetails = new Mongoose.Schema({
+var OrdersDetails = new Mongoose.Schema({
     details:{
-        type: [PizzaIngredients],
-        required:true
+        type: [PizzaIngredients]
     },
     totalPrice:{
         type: Types.Number
@@ -48,7 +47,7 @@ var OrderDetails = new Mongoose.Schema({
 
 });
 
-const OrderSchema = new Mongoose.Schema(
+const OrdersSchema = new Mongoose.Schema(
     {
       name: {
         type: Types.String,
@@ -63,7 +62,7 @@ const OrderSchema = new Mongoose.Schema(
         required: true
       },
       orderDetails:{
-          type: OrderDetails,
+          type: OrdersDetails,
           required: true
       }
     },
@@ -71,4 +70,4 @@ const OrderSchema = new Mongoose.Schema(
   );
   
   
-  module.exports = Mongoose.model("Order", OrderSchema);
+  module.exports = Mongoose.model("Orders", OrdersSchema);
