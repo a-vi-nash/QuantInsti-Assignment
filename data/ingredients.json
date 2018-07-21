@@ -1,0 +1,78 @@
+[
+    {
+        "ingredientsType":"Base",
+        "items":[{"item":"Normal","price":300},
+            {"item":"Thin crust","price":350}],
+        "min":1,
+        "sortOrder":1,
+        "max":1
+      },
+      {
+        "ingredientsType":"Toppings",
+        "items":[{"item":"Anchovies","price":50},
+            {"item":"Bacon","price":100},
+            {"item":"Canadian Bacon","price":150},
+            {"item":"Chicken","price":100},
+            {"item":"Italian Sausage","price":175},
+            {"item":"Sausage","price":125},
+            {"item":"Pepperoni","price":90}],
+        "sortOrder":2,
+        "min":1,
+        "max":3
+      },
+      {
+        "ingredientsType":"Veggies",
+        "items":[{"item":"Green Peppers","price":50},
+            {"item":"Mushrooms","price":25},
+            {"item":"Onions","price":30},
+            {"item":"Tomatoes","price":30},
+            {"item":"Banana Peppers","price":70},
+            {"item":"Pineapple Tidbits","price":65},
+            {"item":"Ripe Olives","price":95},
+            {"item":"Green Olives","price":90},
+            {"item":"Jalapeno Peppers","price":75}],
+        "sortOrder":3,
+        "min":1,
+        "max":5
+      },
+      {
+        "ingredientsType":"Cheese",
+        "items":[{"item":"Parmesan/Romano","price":100},
+            {"item":"Three Cheese Blend","price":150}],
+        "sortOrder":4,
+        "min":1,
+        "max":1
+      },
+      {
+        "ingredientsType":"Sauces",
+        "items":[{"item":"Chicken BBQ Pizza Sauce","price":80},
+            {"item":"Ranch Sauce","price":70},
+            {"item":"Spinach Alfredo Sauce","price":75}],
+        "sortOrder":5,
+        "min":1,
+        "max":3
+      },
+      {
+        "ingredientsType":"Sides & Desserts",
+        "items":[{"item":"Chicken Poppers","price":200},
+            {"item":"Chicken Wings (Roasted)","price":250},
+            {"item":"Chocolate Chip Cookie","price":150},
+            {"item":"Double Chocolate Chip Brownie","price":200}],
+        "sortOrder":6,
+        "min":0,
+        "max":4
+      },
+      {
+        "ingredientsType":"Extras",
+        "items":[{"item":"Pepperoncini","price":25},
+            {"item":"BBQ Dipping Sauce","price":25},
+            {"item":"Blue Cheese Dipping Sauce","price":25},
+            {"item":"Buffalo Dipping Sauce","price":25},
+            {"item":"Cheese Dipping Sauce","price":25},
+            {"item":"Garlic Sauce","price":25},
+            {"item":"Garlic Parmesan Sauce","price":25},
+            {"item":"Honey Chipotle Sauce","price":25}],
+        "sortOrder":7,
+        "min":0,
+        "max":8
+      }]
