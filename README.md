@@ -9,8 +9,8 @@ Javascript MEAN Stack Assignment
 
 3. import the ingredients and coupon data from the data folder using the below mongoimport commands:
   
-    - mongoimport --db "quantinsti" --collection "ingredients" ingredients.json;
-    - mongoimport --db "quantinsti" --collection "coupons" coupons.json;
+    - mongoimport --db "quantinsti" --collection "ingredients" --file ingredients.json --jsonArray
+    - mongoimport --db "quantinsti" --collection "coupons" --file coupons.json --jsonArray
 
 4. run server;
     - node index.js
