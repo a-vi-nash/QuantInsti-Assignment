@@ -10,6 +10,32 @@ const Mongoose = require("mongoose"),
  */
 const modelName = "Ingredients";
 
+var Address = new Mongoose.Schema({
+  billingAddress: {
+    type: AddressDetails,
+    required: true
+  },
+  serviceAddress: {
+    type: AddressDetails,
+    required: true
+  },
+  isActive: {
+    type: Types.Boolean,
+    default: true
+  },
+  customerNo: {
+    type: Types.String
+  },
+  customerGuid: {
+    type: Types.String
+  },
+  isBillingAddressSameAsServiceAddress: {
+    type: Types.Boolean,
+    default: false
+  }
+},
+  { timestamps: true });
+
 const IngredientsSchema = new Mongoose.Schema(
   {
     IngredientsName: {
@@ -22,7 +48,8 @@ const IngredientsSchema = new Mongoose.Schema(
     },
     sortOrder:{
       type: Types.Number
-    }
+    },
+    address: [Address],
   },
   { timestamps: true }
 );
