@@ -12,8 +12,8 @@ router.get(
   (req, res) => {
     Ingredients.find()
       .sort({ sortOrder: 1 })
-      .then(Ingredientss => {
-        if (!Ingredientss.length) {
+      .then(Ingredients => {
+        if (!Ingredients.length) {
           return res
             .status(global.config.default_not_found_http_code)
             .json({
